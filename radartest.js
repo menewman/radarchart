@@ -5,7 +5,20 @@
  * factory.chart(data)
  *   -> returns an HTML canvas with the data charted out
 ******************************************************************************/
-let factory = window.radarchart.createRadarChartFactory(400, 150, 6);
-let canvas = factory.chart([60, 90, 55, 90, 80, 110]);
 
-document.getElementById('canvasContainer').appendChild(canvas);
+function renderChart() {
+  let valuesStr = document.getElementById('values').value;
+  let data = valuesStr.replace(/\s/g, '').split(',').map(x => parseInt(x, 10));
+
+  let factory = window.radarchart.createRadarChartFactory(400, 150, data.length);
+  let canvas = factory.chart(data);
+
+  let container = document.getElementById('canvasContainer');
+  container.innerHTML = '';
+  container.appendChild(canvas);
+
+  return false;
+}
+
+// initial chart
+renderChart();
