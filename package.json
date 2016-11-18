@@ -1,0 +1,26 @@
+{
+  "name": "radarchart",
+  "version": "0.0.0",
+  "description": "Script for generating radar charts using JS and HTML canvas",
+  "main": "radarchart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menewman/radarchart.git"
+  },
+  "keywords": [
+    "radar",
+    "chart",
+    "radarchart",
+    "canvas",
+    "graph"
+  ],
+  "author": "Michael Newman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/menewman/radarchart/issues"
+  },
+  "homepage": "https://github.com/menewman/radarchart#readme"
+}
