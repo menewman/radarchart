@@ -1,10 +1,11 @@
 /******************************************************************************
- * window.radarchart.createRadarChartFactory() -> returns a radar chart factory
- *
- * factory.chart(data) -> returns an HTML canvas with the data charted out
+ * Intended Usage:
+ * const radarchart = require('radarchart');
+ * let factory = radarchart.createRadarChartFactory();
+ * let canvas = factory.chart(data)
 ******************************************************************************/
-window.radarchart = (function() {
-  function createRadarChartFactory(canvasSize, maxRadius, numAxes) {
+module.exports = {
+  createRadarChartFactory(canvasSize, maxRadius, numAxes) {
     if (numAxes < 3) {
       throw new Error("Radar charts must have at least three axes");
     }
@@ -112,6 +113,4 @@ window.radarchart = (function() {
       })();
     }
   }
-
-  return { createRadarChartFactory: createRadarChartFactory };
-})();
+};

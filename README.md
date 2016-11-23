@@ -4,7 +4,9 @@ Script for generating radar charts using JS and HTML canvas.
 
 First, create a radar chart factory:
 ```javascript
-let factory = window.radarchart.createRadarChartFactory(canvasSize, maxRadius, numAxes);
+let radarchart = require('radarchart');
+
+let factory = radarchart.createRadarChartFactory(canvasSize, maxRadius, numAxes);
 ```
 
 Where `canvasSize` is a number representing the desired side length of the canvas, `maxRadius` is the maximum value to be plotted on the radar chart, and `numAxes` is the number of axes to be charted.
